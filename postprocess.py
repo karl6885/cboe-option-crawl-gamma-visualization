@@ -158,7 +158,7 @@ plt.grid()
 plt.bar(strikes, dfAgg['TotalGamma'].to_numpy(), width=6, linewidth=0.1, edgecolor='k', label="Gamma Exposure")
 plt.xlim([fromStrike, toStrike])
 chartTitle = "Total Gamma: $" + str("{:.2f}".format(df['TotalGamma'].sum())) + " Bn per 1% SPX Move"
-plt.title(chartTitle, fontweight="bold", fontsize=20)
+plt.title(chartTitle, fontweight="bold", fontsize=15)
 plt.xlabel('Strike', fontweight="bold")
 plt.ylabel('Spot Gamma Exposure ($ billions/1% move)', fontweight="bold")
 plt.axvline(x=spotPrice, color='r', lw=1, label="SPX Spot: " + str("{:,.0f}".format(spotPrice)))
@@ -171,7 +171,7 @@ plt.bar(strikes, dfAgg['CallGEX'].to_numpy() / 10**9, width=6, linewidth=0.1, ed
 plt.bar(strikes, dfAgg['PutGEX'].to_numpy() / 10**9, width=6, linewidth=0.1, edgecolor='k', label="Put Gamma")
 plt.xlim([fromStrike, toStrike])
 chartTitle = "Total Gamma: $" + str("{:.2f}".format(df['TotalGamma'].sum())) + " Bn per 1% SPX Move"
-plt.title(chartTitle, fontweight="bold", fontsize=20)
+plt.title(chartTitle, fontweight="bold", fontsize=15)
 plt.xlabel('Strike', fontweight="bold")
 plt.ylabel('Spot Gamma Exposure ($ billions/1% move)', fontweight="bold")
 plt.axvline(x=spotPrice, color='r', lw=1, label="SPX Spot:" + str("{:,.0f}".format(spotPrice)))
