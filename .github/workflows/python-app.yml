@@ -4,13 +4,8 @@
 name: CBOE Option Data Crawling and Market Gamma Visualization
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
