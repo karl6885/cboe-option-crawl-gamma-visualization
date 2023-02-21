@@ -78,7 +78,7 @@ import numpy as np
 import scipy
 from scipy.stats import norm
 import matplotlib.pyplot as plt
-from datetime import datetime, timedelta, date
+from datetime import timedelta
 
 pd.options.display.float_format = '{:,.4f}'.format
 
@@ -124,7 +124,7 @@ toStrike = 1.2 * spotPrice
 # day = int(monthDay[2][:-1])
 # todayDate = date(year, month, day)
 
-todayDate = datetime.datetime.today()
+todayDate = datetime.date.today()
 
 # Get SPX Options Data
 df = pd.read_csv(filename, sep=",", header=None, skiprows=4)
